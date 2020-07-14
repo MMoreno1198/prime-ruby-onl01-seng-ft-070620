@@ -1,18 +1,16 @@
 def prime?(num)
   
-  start = 2
+  if num <= 1 
+    
+    return false
+    
+  elsif (2...num).any? {|x| num % x === 0}
   
-  if num > 1
+    return false 
     
-    test = (start..num-1).to_a
-    
-    test.none? { |test_num|
-    
-      num % test_num == 0}
   else
     
-    
-    false
+    return true 
     
   end
 end 
